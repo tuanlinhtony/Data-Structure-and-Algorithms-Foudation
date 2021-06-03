@@ -1,16 +1,13 @@
-# Nhập vào một số nguyên dương n, và n số nguyên lần lượt là các phần tử
-# trong dãy a.
-# Hãy đưa ra một số nguyên là tổng tất cả các phần tử trong dãy đó.
+n = (int)(input())  # nhap vao mot so nguyen duong n
+a = []  # array a
 
-n = (int)(input()) # so nguyen duong n
-a = []  # list a
-
-# nhap lan luot cac so nguyen 
+# nhap lan luot cac so nguyen n
 for i in range(n):
     a.append((int)(input()))
-# tinh tong tat ca so da nhap vao list
-Sum = 0
+result = ""
+# binh phuong moi phan tu cua mang a
 for i in range(n):
-    Sum += a[i]
-# in ra ket qua
-print(Sum)
+    a[i] = pow(a[i], 2)
+    result += str(a[i]) + " " # chuyen sang dang chuoi
+
+print(result.replace("," , " ")) # xoa dau "," va in ra
